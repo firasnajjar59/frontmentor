@@ -9,13 +9,13 @@
 body {
   background-color: hsl(229deg, 57%, 11%);
   max-width: 1440px;
-  aspect-ratio: 16/9;
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 
 .container {
+  aspect-ratio: 16/9;
   width: 100%;
   background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
@@ -170,4 +170,45 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/bg-mobile.png);
+    background-position: top;
+    background-size: cover;
+  }
+  .container .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .container .wrapper .fylo {
+    width: 90%;
+    box-sizing: border-box;
+    margin: auto;
+  }
+  .container .wrapper .fylo .logo img {
+    max-width: 150px;
+  }
+  .container .wrapper .progress {
+    width: 90%;
+    margin: auto;
+  }
+  .container .wrapper .progress .popup {
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    border-left-width: 0;
+    right: 50%;
+    top: 100%;
+    transform: translate(50%, -50%);
+  }
+  .container .wrapper .progress .popup .div {
+    border-radius: 0.5rem;
+  }
 }/*# sourceMappingURL=main.css.map */
